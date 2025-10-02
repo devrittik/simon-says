@@ -1,22 +1,25 @@
-body{
+body {
     text-align: center;
     font-family: Arial, sans-serif;
-    background-color:  #000080;
+    background-color: #000080;
+    margin: 0;
+    padding: 0;
 }
 
+/* Headings */
 h1 {
     font-size: 3rem;
     margin-top: 10px;
     font-family: "Grenze Gotisch", serif;
     color: whitesmoke;
-}   
+}
 
 h2 {
     font-size: 1.5rem;
-    margin-top: 20px;
+    margin-top: 10px;
     color: #555;
     font-family: "Bitcount Prop Single Ink", system-ui;
-}   
+}
 
 h3 {
     font-family: "Gruppo", cursive;
@@ -24,12 +27,27 @@ h3 {
     color: whitesmoke;
 }
 
+/* Button container */
 .btn-container {
     display: flex;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
     justify-content: center;
     margin-top: 40px;
-}       
+    gap: 10px;
+}
 
+/* Start button */
+.start {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: lightgray;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Game buttons */
 .btn {
     width: 200px;
     height: 200px;
@@ -44,34 +62,71 @@ h3 {
     transform: scale(0.95);
 }
 
+/* Colors */
 .red {
     background-color: red;
 }
-
 .blue {
     background-color: blue;
 }
-
 .green {
     background-color: green;
-}   
-
+}
 .yellow {
     background-color: yellow;
 }
 
+/* Flash effect */
 .flash {
     opacity: 0.5;
     box-shadow: 0 0 20px white;
     transition: opacity 0.2s, box-shadow 0.2s;
 }
 
+/* Video tutorial */
 .video-tutorial {
-    height: auto;
+    max-width: 100%;
     width: 600px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px auto;
     border: #555 2px solid;
-    display: inline-block  ;
+    display: block;
     padding: 10px;
+}
+
+/* =====================
+   RESPONSIVENESS
+   ===================== */
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .btn {
+        width: 150px;
+        height: 150px;
+    }
+    .start {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .btn {
+        width: 120px;
+        height: 120px;
+        border: 6px solid black;
+    }
+    .start {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
 }
