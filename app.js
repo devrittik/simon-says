@@ -4,13 +4,13 @@ let level=0;
 let started=false;
 const btnColors=["red","blue","green","yellow"];
 
-document.addEventListener("keypress",function(){
-    if(!started){
-        document.querySelector("h2").textContent="Level "+level;
-        nextSequence();
-        started=true;
-    };
-});
+// document.addEventListener("keypress",function(){
+//     if(!started){
+//         document.querySelector("h2").textContent="Level "+level;
+//         nextSequence();
+//         started=true;
+//     };
+// });
 
 function btnFlash(color){
     let btn=document.querySelector("."+color);
@@ -32,6 +32,19 @@ function nextSequence(){
 };  
 
 let buttons=document.querySelectorAll(".btn");
+let start =document.querySelector(".start");
+
+start.addEventListener("click",function(){
+    if(!started){
+        document.querySelector("h2").textContent="Level "+level;
+        nextSequence();
+        started=true;
+    };
+
+});
+
+
+
 
 function checkAnswer(idx){
     console.log("current level: "+level);
@@ -42,7 +55,7 @@ function checkAnswer(idx){
             },1000);
         };
     } else{
-        document.querySelector("h2").innerHTML=`Game Over! Your Score Was  ${(level-1)*100} </br> Press Any Key to Restart`;
+        document.querySelector("h2").innerHTML=`Game Over! Your Score Was  ${(level-1)*100} </br> Press 'START' to Restart`;
         document.querySelector("body").style.backgroundColor="red";
         setTimeout(function() {
                 document.querySelector("body").style.backgroundColor="#000080";
