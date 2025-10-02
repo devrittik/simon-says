@@ -1,0 +1,77 @@
+body{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color:  #000080;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+    font-family: "Grenze Gotisch", serif;
+    color: whitesmoke;
+}   
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #555;
+    font-family: "Bitcount Prop Single Ink", system-ui;
+}   
+
+h3 {
+    font-family: "Gruppo", cursive;
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}       
+
+.btn {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20%;
+    border: 10px solid black;
+    cursor: pointer;  
+    transition: transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}   
+
+.yellow {
+    background-color: yellow;
+}
+
+.flash {
+    opacity: 0.5;
+    box-shadow: 0 0 20px white;
+    transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.video-tutorial {
+    height: auto;
+    width: 600px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: #555 2px solid;
+    display: inline-block  ;
+    padding: 10px;
+}
