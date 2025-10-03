@@ -43,15 +43,13 @@ start.addEventListener("click",function(){
 
 });
 
-
-
-
 function checkAnswer(idx){
     console.log("current level: "+level);
     if(userSeq[idx]===gameSeq[idx]){ 
         if(userSeq.length===gameSeq.length){
             setTimeout(function(){
                 nextSequence();
+                addPoint();
             },1000);
         };
     } else{
@@ -60,15 +58,14 @@ function checkAnswer(idx){
         setTimeout(function() {
                 document.querySelector("body").style.backgroundColor="#000080";
             }, 150);
-        startOver();
+        // startOver();
+        gameOver();
     }   
      
 };
 
 function startOver(){   
-    level=0;
-    gameSeq=[];
-    started=false;
+
 }       
 
 
@@ -81,6 +78,41 @@ function btnClick(event){
 
 for (btn of buttons) {
     btn.addEventListener("click",btnClick);
+}
+
+// Initialize scores
+let currentScore = 0;
+let highestScore = localStorage.getItem("highestScore") || 0;
+
+// Update UI initially
+document.getElementById("highest-score").innerText = "Highest Score: " + highestScore;
+document.getElementById("current-score").innerText = "Score: " + currentScore;
+
+// Function: add points
+function addPoint() {
+  currentScore += 100; // Or your game logic
+  document.getElementById("current-score").innerText = "Score: " + currentScore;
+}
+
+// Function: when game ends
+function gameOver() {
+  if (currentScore > highestScore) {
+    highestScore = currentScore;
+    localStorage.setItem("highestScore", highestScore); // Save in browser
+  }
+
+  level=0;
+  gameSeq=[];
+  started=false;
+
+  alert("Game Over! Your Score: " + currentScore + "\nHighest Score: " + highestScore);
+
+  // Update UI
+  document.getElementById("highest-score").innerText = "Highest Score: " + highestScore;
+
+  // Reset score
+  currentScore = 0;
+  document.getElementById("current-score").innerText = "Score: " + currentScore;
 }
 
 // Simon Says Game
