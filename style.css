@@ -204,7 +204,7 @@ h3 {
   #scoreboard {
     font-size: 14px;
     padding: 8px 12px;
-    display: flex;
+    display: inline-block;
   }
   #scoreboard p {
     margin: 0;
@@ -217,13 +217,14 @@ h3 {
   #scoreboard {
     font-size: 12px;
     padding: 6px 10px;
-    display: flex;
+    display: inline-block;
   }
   #scoreboard p {
     margin: 0;
     padding: 0;
   }
 }
+
 
 
 
