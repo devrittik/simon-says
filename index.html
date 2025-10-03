@@ -8,39 +8,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Grenze+Gotisch:wght@100..900&family=Gruppo&display=swap" rel="stylesheet">
-
+    
     <title>Simon Says</title>
 </head>
 <body>
     <h1>Simon Says</h1>
     <h2></h2>
     
-    <button class="start">START</button>
+    <button class="start">Start ⏻</button>
 
     <div class="btn-container">
         <div class="line1">
             <div class="btn red" id="red"></div>
             <div class="btn blue" id="blue"></div>
         </div>
+        
         <div class="line2">
             <div class="btn green" id="green"></div>
             <div class="btn yellow" id="yellow"></div>
         </div>
     </div>
+    <div id="scoreboard">
+        <p id="current-score">Score: 0</p>
+        <p id="highest-score">Highest Score: 0</p>
+    </div>
+
+    <!-- <button onclick="addPoint()">+100 Points</button>
+    <button onclick="gameOver()">Game Over</button> -->
+
     <div class="video-tutorial">
         <h3>4-Colour Simon Says Tutorial</h3>
-        <div class="video-container">
-          <iframe 
-                src="https://www.youtube.com/embed/4uK5mCRUGJ4?si=MI5kWwj4uHaelV60&amp;start=21" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-        </iframe>
-        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4uK5mCRUGJ4?si=MI5kWwj4uHaelV60&amp;start=21" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+
+    <footer class="footer-credit">
+        Made with <span class="heart">❤</span> by Hritwik
+    </footer>
+
     <script src="app.js"></script>
 </body>
 </html>
-
