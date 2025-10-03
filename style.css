@@ -188,19 +188,26 @@ h3 {
     }
 }
 
-/* ✅ Responsive for mobile */
-@media (max-width: 768px) {
-  .scoreboard {
-    display: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    transform: translateX(50%);
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
-    text-align: center;
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+  #scoreboard {
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    font-size: 16px;
+    padding: 10px 15px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  #scoreboard {
+    width: 90%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
 
 
