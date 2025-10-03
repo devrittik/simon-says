@@ -102,18 +102,29 @@ h3 {
 }
 
 #scoreboard {
-  position: fixed;       /* Stick to screen */
-  top: 50%;              /* Middle vertically */
-  right: 0;              /* Stick to right side */
-  transform: translateY(-50%); /* Perfect vertical center */
+  /*position: fixed;       /* Stick to screen */
+  /*top: 50%;              /* Middle vertically */
+  /*right: 0;              /* Stick to right side */
+  /*transform: translateY(-50%); /* Perfect vertical center */
   
-  width: 200px;
+  /*width: 200px;
   background-color: #222;  /* Dark sidebar */
-  color: #fff;
+  /*color: #fff;
   padding: 20px;
   border-radius: 10px 0 0 10px; /* Rounded left side */
-  box-shadow: -5px 0 10px rgba(0,0,0,0.3);
-  font-family: Arial, sans-serif;
+  /*box-shadow: -5px 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif; */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  text-align: right;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease-in-out;
 }
 #scoreboard h2 {
   margin-bottom: 15px;
@@ -188,26 +199,20 @@ h3 {
     }
 }
 
-/* Mobile Optimization */
+/* Tablet */
 @media screen and (max-width: 768px) {
   #scoreboard {
-    top: auto;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    font-size: 16px;
-    padding: 10px 15px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #scoreboard {
-    width: 90%;
     font-size: 14px;
     padding: 8px 12px;
   }
 }
 
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  #scoreboard {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
 
 
