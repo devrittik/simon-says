@@ -207,6 +207,8 @@ h3 {
     position: static;
     display: flex;
     align-self: center; 
+    align-items: center;
+    justify-content: center;
   }
   #scoreboard p {
     margin: 0;
@@ -222,12 +224,15 @@ h3 {
     position: static;
     display: flex;
     align-self: center;
+    align-items: center;
+    justify-content: center;
   }
   #scoreboard p {
     margin: 0;
     padding: 0;
   }
 }
+
 
 
 
