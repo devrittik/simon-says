@@ -6,5 +6,5 @@ Test your memory by repeating the sequence of colors — how far can you go?
 🚀 Demo
 
 You can try the live demo here:
-👉 Play Simon Says
+👉 [Play Simon Says](https://simonsays-hritwik.vercel.app/)
  
