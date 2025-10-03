@@ -191,9 +191,9 @@ h3 {
 /* ✅ Responsive for mobile */
 @media (max-width: 768px) {
   .scoreboard {
-    top: auto;
+    top: 0;
     bottom: 0;
-    right: 50%;
+    right: 0;
     transform: translateX(50%);
     width: 100%;
     border-radius: 10px 10px 0 0;
@@ -201,3 +201,4 @@ h3 {
     text-align: center;
   }
 }
+
