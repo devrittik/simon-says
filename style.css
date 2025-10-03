@@ -191,6 +191,7 @@ h3 {
 /* ✅ Responsive for mobile */
 @media (max-width: 768px) {
   .scoreboard {
+    display: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -201,4 +202,5 @@ h3 {
     text-align: center;
   }
 }
+
 
