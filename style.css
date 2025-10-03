@@ -150,6 +150,11 @@ h3 {
   box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
+.footer-credit a {
+  color: #ff4081;
+  /* text-decoration: none; */
+}
+
 .footer-credit .heart {
   color: red;
   animation: pulse 1s ease-in-out infinite;
@@ -234,6 +239,7 @@ h3 {
     padding: 0;
   }
 }
+
 
 
 
